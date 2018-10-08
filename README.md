@@ -1,23 +1,42 @@
 Motivation for this project.
+
 - To get to know how to do Horizontal Scaling of Containerized application using Kubernetes. This example provides a demonstration on Horizontal Pods Autoscaling(HPA) on a node application.
 
 How to set up the environment and required tools?
+
 1. Docker for Mac/Ubuntu/Windows.
+
     - This is used for creating a containerized application and pushing an image to DockerHub to access it in Kubernetes configuration. You can also use a locally built image. But it is always better to push DockerHub to have an ease of access anywhere whether locally or AWS.
+
     - for Mac, `install Docker for Moc`
+
+
 2. Minikube
+
     - Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day. [https://github.com/kubernetes/minikube]
+
     - for Mac, `brew cask install minikube`
+
+
 2. VirtualBox
+
     - Virtual Box is used by Minikube to run a virtual machine for cluster set up purpose.
+
     - for Mac, `brew cask install virtualbox`
+
+
 3. Kubectl
+
     - Kubectl is the command-line interface that lets you interact with Kuberentes. Run brew install kubectl in your Terminal.
+
     - Minikube will automatically install it as a dependency.
 
 
 Steps to run the sample HPA after installing required tools.
+
+
 - Below steps are to setting up Minikube.
+
     - Run `minikube start`. This command will take time on first run.
     - Check Kubectl installation by running `kubectl version`
     - Enable metrics-server using `minikube addons enable metrics-server`
