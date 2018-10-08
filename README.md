@@ -47,6 +47,8 @@ Steps to run the sample HPA after installing required tools.
         - `cd metrics-server`
         - `kubectl create -f deploy/1.8+/`
         - check the metrics-server using `kubectl top node`
+
+        
 - Clone this project
     - be in root of my project, Run `kubectl apply -f k8s`
     - Open new terminal Run `minikube dashboard` to open Kubernetes dashboard
