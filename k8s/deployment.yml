@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: node-example
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: node-example
+    spec:
+      containers:
+      - name: node-example
+        image: vamin2/node-example
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        resources:
+            limits:
+              cpu: "0.5"
+            requests:
+              cpu: "0.25"
